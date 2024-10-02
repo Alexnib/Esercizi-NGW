@@ -1,0 +1,22 @@
+.nav{
+    border: solid 5px grey;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;/*crea spazi tra gli elementi in modo uniforme, space-etween invece crea il massimo spazio tra i 2 elementi*/
+    align-items: center;
+    border-radius: 100%;
+}
+
+@media (max-width: 500px) {
+    .nav{
+        flex-direction: column;
+    }
+
+}
+@media (max-width: 500px) {
+    .nav{
+        background-color: blue;
+    }
+
+}
