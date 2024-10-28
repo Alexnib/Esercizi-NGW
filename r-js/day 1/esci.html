@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eserczio STAMPA MESSAGGIO</h1>
+    <script>
+        let input;
+        do{ 
+            input= prompt("Dammi un valore da inserire (premi ESCI per annullare)");
+            if (input.toUpperCase() !== 'ESCI'){
+                console.log(input);
+            }
+        }
+        while (input.toUpperCase() !== 'ESCI' );
+    </script>
+</body>
+</html>

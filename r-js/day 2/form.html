@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+    <form id="myForm"> 
+        <!-- NOME -->
+        <label for="nomeInput">Nome:</label><br>
+        <input type="text" id="nomeInput" name="nomeInput"/><br>
+        <!-- COGNOME -->
+        <label for="cognInput">Cognome</label><br>
+        <input type="text" id="cognInput" name="cognInput"/><br>
+        <!-- EMAIL -->
+        <label for="mailInput">Email</label><br>
+        <input type="email"  id="mailInput" name="mailInput"/><br>
+        <!--PASSWORD -->
+        <label id="passInput">Password</label><br>
+        <input type="password" id="passInput" name="passInput"/><br>
+        <button type="submit">Invia</button>
+
+    </form>
+    </div>
+
+    <div id="contenitore"> 
+        <p id="outputText"></p>
+    </div> 
+
+    <script>
+        const form=document.getElementById("myForm");
+        const nameInput = document.getElementById("nomeInput");
+        const cognInput = document.getElementById("cognInput");
+        const mailInput = document.getElementById("mailInput");
+        const passInput = document.getElementById("passInput");
+        const outputText = document.getElementById("outputText");
+        const contenitore = document.getElementById("contenitore");
+        form.addEventListener("submit",function (event) {
+            //Evita il comportamento predefinito dell'invio del form
+            event.preventDefault();
+
+            //Ottieni il vallore dell'input
+
+            const inputValuen= nameInput.value;
+            const inputValuec= cognInput.value;
+            const inputValuem= mailInput.value;
+            const inputValuep= passInput.value;
+
+            //Mostra il valore nella console
+            
+            console.log("Ciao " + inputValuen + inputValuec +", questa è la tua mail: " + inputValuem + " e questa è la tua password: " + inputValuep);
+        
+            //Mostra il valore sotto al form
+
+            // contenitore.innerHTML = "<h1>Benvenuto</h1>";
+            outputText.innerText = "Ciao " + inputValuen + inputValuec +", questa è la tua mail: " + inputValuem + "e questa è la tua password: " + inputValuep;
+
+        });
+    </script>
+</body>
+</html>
+{}

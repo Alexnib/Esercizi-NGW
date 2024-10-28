@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+        <header></header>
+        <main>
+            <h1>ESERCIZI</h1>
+
+
+        </main>
+        <footer></footer>
+        <script>
+            //CODICE JS
+            let lista_spesa = {};
+            function aggiungi_elemento(nome,quantità) {
+                if (lista_spesa[nome]){
+                    lista_spesa[nome] += quantità;
+                } else{
+                    lista_spesa[nome]=quantità;
+                    }
+            console.log(`${quantità} ${nome} aggiunto/a alla lista.`);
+            }
+            function rimuoviElemento(nome) {
+    if (lista_spesa[nome]) {
+        delete lista_spesa[nome];
+        console.log(`${nome} rimosso dalla lista.`);
+    } else {
+        console.log(`${nome} non presente nella lista.`);
+    }
+}
+function visualizzaLista() {
+    console.log("Lista della spesa:");
+    for (let elemento in lista_spesa) {
+        console.log(`${elemento}: ${lista_spesa[elemento]}`);
+    }
+}
+function main() {
+    while (true) {
+        let scelta = prompt(
+            "Scegli un'opzione:\n" +
+            "1. Aggiungi elemento\n" +
+            "2. Rimuovi elemento\n" +
+            "3. Visualizza lista\n" +
+            "4. Esci"
+        );
+
+        switch (scelta) {
+            case "1":
+                let nome = prompt("Inserisci il nome dell'elemento:");
+                let quantità = parseInt(prompt("Inserisci la quantità:"));
+                aggiungi_elemento(nome, quantità);
+                break;
+            case "2":
+                let elementoDaRimuovere = prompt("Inserisci il nome dell'elemento da rimuovere:");
+                rimuoviElemento(elementoDaRimuovere);
+                break;
+            case "3":
+                visualizzaLista();
+                break;
+            case "4":
+                console.log("Grazie per aver usato il gestore della lista della spesa!");
+                return;
+            default:
+                console.log("Opzione non valida. Riprova.");
+        }
+    }
+}
+
+main();
+        </script>
+
+        </body>
+    </html>
+    

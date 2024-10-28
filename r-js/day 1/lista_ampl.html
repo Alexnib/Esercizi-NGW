@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista Ampliata</h1>
+    <script>
+        function add(list=[],p) {
+            list.push(p);
+         }
+
+        function del(list=[],p) {
+            list.pop(p);
+        }
+
+    let lista = [];
+    let prodotto; 
+    let input;
+    let risposta;
+    
+    do { prodotto=prompt("Cosa vuoi aggiungere alla lista");
+    add(lista,prodotto);
+    alert=(`${prodotto} è stato aggiunto alla lista`);
+    console.log(lista); 
+    input=prompt("Che cosa vuoi fare?");
+    switch (input.toUpperCase()) {
+        case "AGGIUNGERE":
+        prodotto=prompt("Cosa vuoi aggiungere alla lista?");
+        add(lista,prodotto);
+        break; 
+        case "ELIMINARE":
+        del(lista,prodotto);
+    }
+    console.log(lista),
+    risposta=prompt("Ora vuoi continuare?")
+    if(risposta.toUpperCase =='NO')
+    console.log("Programma terminato");
+    else if (risposta.toUpperCase == 'SI');
+    }
+    while (risposta.toUpperCase() =='SI')
+
+    </script>
+</body>
+</html>
